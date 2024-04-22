@@ -1,0 +1,35 @@
+label,itemid
+Gamma Glutamyltranferase,53093
+Gamma Glutamyltransferase,50927
+Alkaline Phosphatase,50863
+Alkaline Phosphatase,53086
+Alanine Aminotransferase,53084
+Alanine Aminotransferase (ALT),50861
+Asparate Aminotransferase,53088
+Asparate Aminotransferase (AST),50878
+"Cholesterol, Total",50907
+"Cholesterol, HDL",50904
+"Cholesterol, LDL, Calculated",50905
+"Cholesterol, LDL, Measured",50906
+Cholesterol Ratio (Total/HDL),50903
+Triglycerides,51000
+Glucose,50809
+Glucose,50931
+"Glucose, Whole Blood",52027
+Glucose,52569
+% Hemoglobin A1c,50852
+Creatinine,50912
+"Creatinine, Whole Blood",52024
+Creatinine,52546
+Urea Nitrogen,51006
+Urea Nitrogen,52647
+Uric Acid,51007
+Albumin,50862
+"Albumin, Blood",52022
+Albumin,53085
+(Albumin),53138
+"Bilirubin, Total",50885
+"Bilirubin, Total",53089
+Creatine Kinase (CK),50910
+"Creatine Kinase, MB Isoenzyme",50911
+Haptoglobin,50935
