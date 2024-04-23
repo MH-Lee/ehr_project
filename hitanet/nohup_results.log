@@ -1,0 +1,136 @@
+tran_TransformerTime_HT_L1_wt_1e-4_focal0.00
+building the model ...
+constructing the optimizer ...
+done!
+loading data ...
+/data/notebook/ehr_code/hitanet/models/units.py:10: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  train = np.array(pickle.load(open(training_file, 'rb')))
+/data/notebook/ehr_code/hitanet/models/units.py:11: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  validate = np.array(pickle.load(open(validation_file, 'rb')))
+/data/notebook/ehr_code/hitanet/models/units.py:12: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  test = np.array(pickle.load(open(testing_file, 'rb')))
+training start
+/data/notebook/ehr_code/hitanet/models/units.py:131: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  P = nn.functional.softmax(inputs)
+epoch:0, iteration:0/129, cost:0.497210
+epoch:0, iteration:50/129, cost:0.156477
+epoch:0, iteration:100/129, cost:0.113888
+epoch:0, mean_cost:0.253259, duration:1.962674
+epoch:0, validate_cost:0.265871, duration:1.962674
+Best Epoch:0, Train_Cost:0.253259, Valid_Cost:0.265871, Test_Cost:0.212302
+epoch:1, iteration:0/129, cost:0.145483
+epoch:1, iteration:50/129, cost:0.358222
+epoch:1, iteration:100/129, cost:0.176313
+epoch:1, mean_cost:0.203796, duration:1.937139
+epoch:1, validate_cost:0.269098, duration:1.937139
+Best Epoch:0, Train_Cost:0.253259, Valid_Cost:0.265871, Test_Cost:0.212302
+epoch:2, iteration:0/129, cost:0.054626
+epoch:2, iteration:50/129, cost:0.132230
+epoch:2, iteration:100/129, cost:0.161152
+epoch:2, mean_cost:0.179106, duration:1.950656
+epoch:2, validate_cost:0.259613, duration:1.950656
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:3, iteration:0/129, cost:0.224285
+epoch:3, iteration:50/129, cost:0.052843
+epoch:3, iteration:100/129, cost:0.083105
+epoch:3, mean_cost:0.160636, duration:1.934170
+epoch:3, validate_cost:0.283695, duration:1.934170
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:4, iteration:0/129, cost:0.291272
+epoch:4, iteration:50/129, cost:0.188887
+epoch:4, iteration:100/129, cost:0.062379
+epoch:4, mean_cost:0.142771, duration:1.937030
+epoch:4, validate_cost:0.350877, duration:1.937030
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:5, iteration:0/129, cost:0.074285
+epoch:5, iteration:50/129, cost:0.037451
+epoch:5, iteration:100/129, cost:0.224162
+epoch:5, mean_cost:0.112814, duration:1.944379
+epoch:5, validate_cost:0.360181, duration:1.944379
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:6, iteration:0/129, cost:0.324714
+epoch:6, iteration:50/129, cost:0.068419
+epoch:6, iteration:100/129, cost:0.096341
+epoch:6, mean_cost:0.098167, duration:1.933082
+epoch:6, validate_cost:0.326213, duration:1.933082
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:7, iteration:0/129, cost:0.060675
+epoch:7, iteration:50/129, cost:0.008462
+epoch:7, iteration:100/129, cost:0.178831
+epoch:7, mean_cost:0.081808, duration:1.931769
+epoch:7, validate_cost:0.419206, duration:1.931769
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:8, iteration:0/129, cost:0.207575
+epoch:8, iteration:50/129, cost:0.036493
+epoch:8, iteration:100/129, cost:0.022321
+epoch:8, mean_cost:0.073571, duration:1.942792
+epoch:8, validate_cost:0.356734, duration:1.942792
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:9, iteration:0/129, cost:0.110171
+epoch:9, iteration:50/129, cost:0.014986
+epoch:9, iteration:100/129, cost:0.040266
+epoch:9, mean_cost:0.061987, duration:1.931112
+epoch:9, validate_cost:0.344075, duration:1.931112
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:10, iteration:0/129, cost:0.005643
+epoch:10, iteration:50/129, cost:0.038952
+epoch:10, iteration:100/129, cost:0.018480
+epoch:10, mean_cost:0.047059, duration:1.945416
+epoch:10, validate_cost:0.365581, duration:1.945416
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:11, iteration:0/129, cost:0.054909
+epoch:11, iteration:50/129, cost:0.011415
+epoch:11, iteration:100/129, cost:0.010428
+epoch:11, mean_cost:0.039849, duration:1.943154
+epoch:11, validate_cost:0.323726, duration:1.943154
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:12, iteration:0/129, cost:0.016064
+epoch:12, iteration:50/129, cost:0.010918
+epoch:12, iteration:100/129, cost:0.010371
+epoch:12, mean_cost:0.023754, duration:1.936595
+epoch:12, validate_cost:0.445377, duration:1.936595
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:13, iteration:0/129, cost:0.009332
+epoch:13, iteration:50/129, cost:0.025741
+epoch:13, iteration:100/129, cost:0.044383
+epoch:13, mean_cost:0.022296, duration:1.943407
+epoch:13, validate_cost:0.431001, duration:1.943407
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:14, iteration:0/129, cost:0.085846
+epoch:14, iteration:50/129, cost:0.003613
+epoch:14, iteration:100/129, cost:0.006869
+epoch:14, mean_cost:0.012361, duration:1.944488
+epoch:14, validate_cost:0.422339, duration:1.944488
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:15, iteration:0/129, cost:0.005204
+epoch:15, iteration:50/129, cost:0.010915
+epoch:15, iteration:100/129, cost:0.000497
+epoch:15, mean_cost:0.018405, duration:1.961316
+epoch:15, validate_cost:0.475227, duration:1.961316
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:16, iteration:0/129, cost:0.006100
+epoch:16, iteration:50/129, cost:0.002501
+epoch:16, iteration:100/129, cost:0.000935
+epoch:16, mean_cost:0.009086, duration:1.972290
+epoch:16, validate_cost:0.605080, duration:1.972290
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:17, iteration:0/129, cost:0.003626
+epoch:17, iteration:50/129, cost:0.011455
+epoch:17, iteration:100/129, cost:0.002041
+epoch:17, mean_cost:0.019062, duration:1.960299
+epoch:17, validate_cost:0.427458, duration:1.960299
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:18, iteration:0/129, cost:0.002466
+epoch:18, iteration:50/129, cost:0.001315
+epoch:18, iteration:100/129, cost:0.004050
+epoch:18, mean_cost:0.008602, duration:1.961878
+epoch:18, validate_cost:0.583000, duration:1.961878
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+epoch:19, iteration:0/129, cost:0.012402
+epoch:19, iteration:50/129, cost:0.001493
+epoch:19, iteration:100/129, cost:0.003432
+epoch:19, mean_cost:0.021436, duration:1.954592
+epoch:19, validate_cost:0.486766, duration:1.954592
+Best Epoch:2, Train_Cost:0.179106, Valid_Cost:0.259613, Test_Cost:0.193379
+0.9502487562189055 0.96875 0.44285714285714284 0.6078431372549019 0.7207473725184897
+[0.95024876 0.96875    0.44285714 0.60784314 0.72074737]

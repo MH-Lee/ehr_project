@@ -1,12 +1,13 @@
 import torch
 import torch.nn as nn
+import math
 from torch.autograd import Variable
 import torch.nn.functional as F
 
 
 class FixedPositionalEncoding(nn.Module):
     def __init__(self, d_model, dropout=0.1, max_len=5000):
-        super(PositionalEncoding, self).__init__()
+        super(FixedPositionalEncoding, self).__init__()
         self.dropout = nn.Dropout(p=dropout)
         position = torch.arange(max_len, dtype=torch.float).unsqueeze(1)
         div_term = torch.exp(torch.arange(0, d_model, 2, dtype=torch.float) * -(math.log(10000.0) / d_model))
@@ -21,7 +22,6 @@ class FixedPositionalEncoding(nn.Module):
 
     
 class LearnablePositionalEncoding(nn.Module):
-
     def __init__(self, d_model, dropout=0.1, max_len=1024):
         super(LearnablePositionalEncoding, self).__init__()
         self.dropout = nn.Dropout(p=dropout)
@@ -32,6 +32,46 @@ class LearnablePositionalEncoding(nn.Module):
 
     def forward(self, x):
         x = x + self.pe[:x.size(0), :]
+        return self.dropout(x)
+
+
+class FixedEmbedding(nn.Module):
+    def __init__(self, c_in, d_model):
+        super(FixedEmbedding, self).__init__()
+
+        w = torch.zeros(c_in, d_model).float()
+        w.require_grad = False
+
+        position = torch.arange(0, c_in).float().unsqueeze(1)
+        div_term = (torch.arange(0, d_model, 2).float() * -(math.log(10000.0) / d_model)).exp()
+
+        w[:, 0::2] = torch.sin(position * div_term)
+        w[:, 1::2] = torch.cos(position * div_term)
+
+        self.emb = nn.Embedding(c_in, d_model)
+        self.emb.weight = nn.Parameter(w, requires_grad=False)
+
+    def forward(self, x):
+        return self.emb(x).detach()
+
+    
+class TemporalEmbedding(nn.Module):
+    def __init__(self, d_model, embed_type='fixed', dropout=0.1):
+        super(TemporalEmbedding, self).__init__()
+        self.dropout = nn.Dropout(p=dropout)
+        weekday_size = 60; day_size = 32; month_size = 13;
+
+        Embed = FixedEmbedding if embed_type=='fixed' else nn.Embedding
+        self.weeks_embed = Embed(weekday_size, d_model)
+        self.day_embed = Embed(day_size, d_model)
+        self.month_embed = Embed(month_size, d_model)
+    
+    def forward(self, x, time_feature):
+        time_feature = time_feature.long()
+        weeks_x = self.weeks_embed(time_feature[:,:,3])
+        day_x = self.day_embed(time_feature[:,:,2])
+        month_x = self.month_embed(time_feature[:,:,1])
+        x = x + weeks_x + day_x + month_x 
         return self.dropout(x)
 
 

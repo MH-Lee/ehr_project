@@ -1,0 +1,4 @@
+model_lr0.001_classi1_dim64_hid256_layer6_epoch15_no_center_total_label_no_clinical_fixed_174749.txt
+[0.945273631840796, 0.7661736084079408, 0.5416666666666666, 1.0, 0.37142857142857144]
+[[734   0]
+ [ 44  26]]
